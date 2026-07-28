@@ -1,0 +1,28 @@
+title: "Mohammed Mahdi Jahangiri"
+name: "Mohammed Mahdi Jahangiri"
+description: "Computer Science postgraduate portfolio"
+url: "https://devpirate01.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+
+plugins:
+  - jekyll-include-cache
+
+minimal_mistakes_skin: "dark"
+
+author:
+  name: "Mohammed Mahdi Jahangiri"
+  avatar: ""
+  bio: "Computer Science postgraduate building projects in software, AI, and games."
+  location: "Cardiff, UK"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devPirate01"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devPirate01"
