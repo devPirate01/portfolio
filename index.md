@@ -33,7 +33,6 @@ title: "Portfolio"
     <h2>Featured work</h2>
     <p class="section-meta">Projects that demonstrate gameplay engineering, AI systems, VR publishing, and academic research.</p>
 
-    <!-- DOME PROJECTION -->
     <div class="project-card">
       <h3>360° Dome Projection UI Warping — Awkward Studios / Media Cymru</h3>
       <p class="project-meta">Unity, C#, TextMesh Pro, URP, GitHub PR workflow</p>
@@ -72,7 +71,6 @@ for (int i = 0; i < vertices.Length; i++)
       </div>
     </div>
 
-    <!-- AI NPC PROTOTYPE -->
     <div class="project-card">
       <h3>AI-Driven NPC Interaction Prototype</h3>
       <p class="project-meta">Unreal Engine 5, C++, Python, FastAPI, Whisper, Wit.ai, Hugging Face</p>
@@ -129,7 +127,6 @@ async def predict(audio: UploadFile):
       </div>
     </div>
 
-    <!-- APOCEUS -->
     <div class="project-card">
       <h3>Apoceus: Winter Wars — Landell Games</h3>
       <p class="project-meta">Unity, C#, Unity DevOps, Plastic SCM, Steam</p>
@@ -148,7 +145,6 @@ async def predict(audio: UploadFile):
       </div>
     </div>
 
-    <!-- VR PLAYGROUND -->
     <div class="project-card">
       <h3>VR Playground — Meta Quest Store</h3>
       <p class="project-meta">Unity, C#, Meta Quest SDK</p>
@@ -167,7 +163,6 @@ async def predict(audio: UploadFile):
       </div>
     </div>
 
-    <!-- HAND TRACKING -->
     <div class="project-card">
       <h3>Hand-Tracked VR Interaction Prototype</h3>
       <p class="project-meta">Unity, hand-tracking SDKs, mobile VR</p>
@@ -185,7 +180,6 @@ async def predict(audio: UploadFile):
       </div>
     </div>
 
-    <!-- ICHORA PUBLICATION -->
     <div class="project-card project-publication">
       <h3>Publication — ICHORA 2024</h3>
       <p class="project-meta">Research, LLMs, pursuit learning automata, NLP, local AI systems</p>
