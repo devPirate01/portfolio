@@ -1,8 +1,8 @@
 title: "Mohammed Mahdi Jahangiri"
 name: "Mohammed Mahdi Jahangiri"
-description: "Computer Science postgraduate portfolio"
-url: "https://devpirate01.github.io/portfolio"
-baseurl: ""
+description: "Games Programmer & AI Engineer. Published research on NPC dialogue, shipped VR titles, and built real-time AI systems."
+url: "https://devpirate01.github.io"
+baseurl: "/portfolio"
 
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 
@@ -20,9 +20,26 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devPirate01"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/m-jahangiri"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mapjiv@live.com"
+
+social:
+  - name: "GitHub"
+    url: "https://github.com/devPirate01"
+  - name: "LinkedIn"
+    url: "https://linkedin.com/in/m-jahangiri"
+  - name: "Email"
+    url: "mailto:mapjiv@live.com"
 
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devPirate01"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/m-jahangiri"
