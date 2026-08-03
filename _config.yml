@@ -9,12 +9,25 @@ remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-include-cache
 
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "default"
+
+# Navigation
+breadcrumbs: false
+
+# Author profile disabled globally for portfolio
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      classes: wide
 
 author:
   name: "Mohammed Mahdi Jahangiri"
   avatar: ""
-  bio: "Computer Science postgraduate building projects in software, AI, and games."
+  bio: ""
   location: "Cardiff, UK"
   links:
     - label: "GitHub"
@@ -32,8 +45,6 @@ social:
     url: "https://github.com/devPirate01"
   - name: "LinkedIn"
     url: "https://linkedin.com/in/m-jahangiri"
-  - name: "Email"
-    url: "mailto:mapjiv@live.com"
 
 footer:
   links:

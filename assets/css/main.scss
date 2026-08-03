@@ -1,0 +1,158 @@
+---
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ============================================
+   CUSTOM PORTFOLIO STYLES
+   ============================================ */
+
+/* Color system matching CV */
+$ink: #111827;
+$muted: #4b5563;
+$navy: #0b1f33;
+$teal: #005f73;
+
+/* Typography */
+body {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $navy;
+}
+
+/* Hero overlay text */
+.page__hero--overlay {
+  .page__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+  }
+
+  .page__lead {
+    font-size: 1.15rem;
+    max-width: 700px;
+  }
+}
+
+/* Project section headings */
+.page__content {
+  h2 {
+    margin-top: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $teal;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    color: $navy;
+    font-weight: 600;
+  }
+
+  /* Result/outcome paragraphs */
+  p > strong:first-child {
+    color: $navy;
+  }
+}
+
+/* Code blocks */
+div.highlighter-rouge,
+figure.highlight {
+  border-radius: 12px;
+  background: #1f2937;
+  margin: 1.5rem 0;
+
+  .highlight {
+    background: transparent;
+    padding: 1rem;
+
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #e5e7eb;
+    }
+  }
+}
+
+/* Architecture diagram block */
+pre.diagram {
+  background: #1f2937;
+  color: #e5e7eb;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  padding: 1.25rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+/* Buttons */
+.btn--primary {
+  background-color: $navy !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: darken($navy, 10%) !important;
+  }
+}
+
+/* Masthead (nav) */
+.masthead {
+  background: rgba(249, 250, 251, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+  .greedy-nav {
+    a {
+      color: $navy;
+      font-weight: 600;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
+
+/* Hide author sidebar completely when author_profile: false */
+.sidebar {
+  display: none !important;
+}
+
+/* Ensure wide layout actually uses full width */
+.layout--single {
+  .page {
+    @include breakpoint($large) {
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+/* Project images */
+.page__content {
+  img {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 1rem 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .page__hero--overlay {
+    .page__title {
+      font-size: 2rem;
+    }
+  }
+
+  .page__content {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
