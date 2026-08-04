@@ -35,7 +35,7 @@ author:
       url: "https://github.com/devPirate01"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/m-jahangiri"
+      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:mapjiv@live.com"
@@ -44,7 +44,7 @@ social:
   - name: "GitHub"
     url: "https://github.com/devPirate01"
   - name: "LinkedIn"
-    url: "https://linkedin.com/in/m-jahangiri"
+    url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
 
 footer:
   links:
@@ -53,4 +53,4 @@ footer:
       url: "https://github.com/devPirate01"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/m-jahangiri"
+      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"

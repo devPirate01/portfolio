@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 author_profile: false
-title: "Portfolio"
+title: "Mohammed Mahdi Jahangiri"
 header:
   overlay_color: "#0B1F33"
   overlay_filter: "0.7"
@@ -16,9 +16,11 @@ header:
 excerpt: "Games Programmer & AI Engineer. I build gameplay systems, AI-driven NPC interaction, and VR experiences with Unity, Unreal Engine, C#, C++, and Python."
 ---
 
-## Featured Work
+## Featured Work {#projects}
 
 Projects that demonstrate gameplay engineering, AI systems, VR publishing, and academic research.
+
+---
 
 ### 360° Dome Projection UI Warping — Awkward Studios / Media Cymru
 
@@ -104,6 +106,11 @@ A 3–6 person Unity team project, shipped weekly to a private Steam branch.
 
 **Result:** Consistent weekly playable builds across the team's Steam branch.
 
+<div class="project-links">
+  <a href="https://store.steampowered.com/app/1841690/Apoceus_Winter_Wars/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Steam →</a>
+  <a href="https://www.youtube-nocookie.com/channel/UCKcDQ1wqQHMPW7SKOFdixPQ" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">YouTube Channel →</a>
+</div>
+
 ---
 
 ### VR Playground — Meta Quest Store
@@ -119,6 +126,11 @@ A standalone VR game, shipped to the Meta Quest Store.
 
 **Result:** Live, published title on the Meta Quest Store.
 
+<div class="project-links">
+  <a href="https://www.oculus.com/experiences/quest/5789612427788431/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Meta Quest →</a>
+  <a href="https://www.youtube.com/watch?v=H5RhL2Hi9-w" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch Trailer →</a>
+</div>
+
 ---
 
 ### Hand-Tracked VR Interaction Prototype
@@ -132,6 +144,10 @@ A hand-tracked VR interaction prototype, built after evaluating Unreal's mobile 
 - Delivered a working prototype under real technical uncertainty, planning sprints around unknown variables.
 
 **Result:** A working hand-tracked prototype, and a clear technical comparison that shaped the engine choice for the project.
+
+<div class="project-links">
+  <a href="https://www.youtube.com/watch?v=WXT4huBhOA0" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch Prototype Video →</a>
+</div>
 
 ---
 
@@ -149,22 +165,27 @@ Published and presented a conference paper on resource-efficient NPC dialogue us
 
 **Result:** A published paper linking academic research to game AI engineering. This research underpins my current MSc dissertation on safe, efficient AI companions.
 
-[View on Google Scholar →](https://scholar.google.com/scholar?q=Balancing+Game+Satisfaction+and+Resource+Efficiency+LLM+Pursuit+Learning+Automata+NPC+Dialogues)
+<div class="project-links">
+  <a href="https://scholar.google.com/scholar?q=Balancing+Game+Satisfaction+and+Resource+Efficiency+LLM+Pursuit+Learning+Automata+NPC+Dialogues" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Google Scholar →</a>
+</div>
 
 ---
 
-## About
+## About {#about}
 
 MSc Artificial Intelligence candidate at **Cardiff University**. Published research on LLM-driven NPC dialogue (**ICHORA 2024**). Shipped a VR title to the **Meta Quest Store**. Led a programming team on a Steam-bound Unity project. I work at the intersection of gameplay, AI, and real-time systems — delivering playable game features, AI prototypes, and production pipelines for small teams and immersive titles.
 
 ---
 
-## Contact
+## Contact {#contact}
 
 Get in touch for gameplay engineering, AI systems, or portfolio reviews.
 
-- **Email:** [mapjiv@live.com](mailto:mapjiv@live.com)
-- **LinkedIn:** [linkedin.com/in/m-jahangiri](https://linkedin.com/in/m-jahangiri)
-- **GitHub:** [github.com/devPirate01](https://github.com/devPirate01)
+- **Email:** <a href="mailto:mapjiv@live.com">mapjiv@live.com</a>
+- **LinkedIn:** <a href="https://www.linkedin.com/in/m-mahdi-jahangiri/" target="_blank" rel="noopener noreferrer">linkedin.com/in/m-mahdi-jahangiri</a>
+- **GitHub:** <a href="https://github.com/devPirate01" target="_blank" rel="noopener noreferrer">github.com/devPirate01</a>
 
-<a href="assets/Mahdi_Jahangiri_CV_Games.pdf" class="btn btn--primary" download>Download CV</a>
+<div class="project-links" style="margin-top: 1.5rem;">
+  <a href="assets/Mahdi_Jahangiri_CV_Games.pdf" class="btn btn--primary" target="_blank">View CV</a>
+  <a href="assets/Mahdi_Jahangiri_CV_Games.pdf" class="btn btn--inverse" download>Download CV</a>
+</div>
