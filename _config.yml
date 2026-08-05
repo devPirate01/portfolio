@@ -10,11 +10,10 @@ plugins:
   - jekyll-include-cache
 
 minimal_mistakes_skin: "default"
-
-# Navigation
 breadcrumbs: false
+search: false
+locale: "en-US"
 
-# Author profile disabled globally for portfolio
 defaults:
   - scope:
       path: ""

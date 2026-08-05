@@ -3,5 +3,7 @@ main:
     url: "#projects"
   - title: "About"
     url: "#about"
+  - title: "Resume"
+    url: "/portfolio/assets/Mahdi_Jahangiri_CV_Games.pdf"
   - title: "Contact"
     url: "#contact"
