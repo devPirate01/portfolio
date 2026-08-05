@@ -1,12 +1,12 @@
 ---
-layout: single
+layout: home
 classes: wide
 author_profile: true
 title: "Mohammed Mahdi Jahangiri"
 header:
   overlay_color: "#0B1F33"
   overlay_filter: "0.7"
-  overlay_image: "{{ '/assets/images/hero-bg.jpg' | relative_url }}"
+  overlay_image: "/assets/images/hero-bg.jpg"
   actions:
     - label: "View Projects"
       url: "#projects"
