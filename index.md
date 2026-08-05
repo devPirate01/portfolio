@@ -1,18 +1,17 @@
 ---
 layout: single
 classes: wide
-author_profile: false
+author_profile: true
 title: "Mohammed Mahdi Jahangiri"
 header:
   overlay_color: "#0B1F33"
   overlay_filter: "0.7"
-  overlay_image: /assets/images/hero-bg.jpg
+  overlay_image: "/portfolio/assets/images/hero-bg.jpg"
   actions:
     - label: "View Projects"
       url: "#projects"
     - label: "Contact"
       url: "#contact"
-  caption: ""
 excerpt: "Games Programmer & AI Engineer. I build gameplay systems, AI-driven NPC interaction, and VR experiences with Unity, Unreal Engine, C#, C++, and Python."
 ---
 
@@ -101,7 +100,7 @@ A 3–6 person Unity team project, shipped weekly to a private Steam branch.
 
 - Coordinated a **3–6 person programming team**, translating production priorities into sprint tasks and raising sprint success from **40% to 90%**.
 - Profiled and optimised rendering bottlenecks with the **Unity Profiler**, improving frame time by **10–30 FPS** on target hardware.
-- Owned weekly **Unity DevOps** branch merges and uploaded builds to a private **Steam** branch.
+- Owned weekly **Unity DevOps** branch merges and uploaded builds to a a private **Steam** branch.
 - Implemented **ScriptableObject**-based unit/data configuration, Unity asset/**LOD** setup and gameplay **state-machine** logic, supporting designer-led balance tweaks.
 
 **Result:** Consistent weekly playable builds across the team's Steam branch.
@@ -168,6 +167,7 @@ Published and presented a conference paper on resource-efficient NPC dialogue us
 <div class="project-links">
   <a href="https://scholar.google.com/scholar?q=Balancing+Game+Satisfaction+and+Resource+Efficiency+LLM+Pursuit+Learning+Automata+NPC+Dialogues" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Google Scholar →</a>
 </div>
+```
 
 ---
 
@@ -186,6 +186,7 @@ Get in touch for gameplay engineering, AI systems, or portfolio reviews.
 - **GitHub:** <a href="https://github.com/devPirate01" target="_blank" rel="noopener noreferrer">github.com/devPirate01</a>
 
 <div class="project-links" style="margin-top: 1.5rem;">
-  <a href="assets/Mahdi_Jahangiri_CV_Games.pdf" class="btn btn--primary" target="_blank">View CV</a>
-  <a href="assets/Mahdi_Jahangiri_CV_Games.pdf" class="btn btn--inverse" download>Download CV</a>
+  <a href="{{ '/assets/Mahdi_Jahangiri_CV_Games.pdf' | relative_url }}" class="btn btn--primary" target="_blank">View CV</a>
+  <a href="{{ '/assets/Mahdi_Jahangiri_CV_Games.pdf' | relative_url }}" class="btn btn--inverse" download>Download CV</a>
 </div>
+```

@@ -118,8 +118,15 @@ pre.diagram {
   }
 }
 
-/* Hide author sidebar completely when author_profile: false */
-.sidebar {
+/* Hide author sidebar ONLY when author_profile is set to false in the file header */
+/* This allows the index.md to show the sidebar while keeping about.md clean */
+.page--no-sidebar .sidebar {
+  display: none !important;
+}
+
+/* If you want to force hide it on specific pages, 
+   you can add 'no-sidebar' to the 'classes' in your Markdown header */
+.no-sidebar .sidebar {
   display: none !important;
 }
 
