@@ -1,10 +1,10 @@
 # This is the main navigation menu
 main:
   - title: "Home"
-    url: "/portfolio/"
+    url: "/"
   - title: "About"
-    url: "/portfolio/about/"
+    url: "/about/"
   - title: "Projects"
-    url: "/portfolio/#projects"
+    url: "/#projects"
   - title: "Contact"
-    url: "/portfolio/#contact"
+    url: "/#contact"

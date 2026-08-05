@@ -51,5 +51,41 @@ defaults:
       type: pages
     values:
       layout: single
+<<<<<<< HEAD
       author_profile: false # We will turn this on per-page in index.md
       classes: wide
+=======
+      author_profile: false
+      classes: wide
+
+author:
+  name: "Mohammed Mahdi Jahangiri"
+  avatar: ""
+  bio: ""
+  location: "Cardiff, UK"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devPirate01"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/m-jahangiri"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mapjiv@live.com"
+
+social:
+  - name: "GitHub"
+    url: "https://github.com/devPirate01"
+  - name: "LinkedIn"
+    url: "https://linkedin.com/in/m-jahangiri"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devPirate01"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/m-jahangiri"
+>>>>>>> parent of f07ef86 (Updated site header and in-site cv view.)
