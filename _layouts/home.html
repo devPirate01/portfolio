@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mahdi Jahangiri - Games Programmer & AI Engineer. Published research on LLM-driven NPC dialogue, shipped VR titles, and built real-time AI systems.">
-    <meta name="keywords" content="Gameplay Programmer, AI Engineer, Unity, Unreal Engine, Python, Machine Learning, NLP, LLM, Game Development">
-    <meta property="og:title" content="Mahdi Jahangiri - Portfolio">
-    <meta property="og:description" content="Games Programmer & AI Engineer. Published research, shipped VR titles, real-time AI systems.">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ '/assets/images/hero.jpg' | absolute_url }}">
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
-  <body>
+{% raw %}{% include head.html %}
+<body class="no-js">
+  {% include header.html %}
+
+  <main id="content" class="site-content" role="main">
     {{ content }}
-  </body>
-</html>
+  </main>
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+</body>
+</html>{% endraw %}
