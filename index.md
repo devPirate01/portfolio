@@ -6,7 +6,7 @@ title: "Mohammed Mahdi Jahangiri"
 header:
   overlay_color: "#0B1F33"
   overlay_filter: "0.7"
-  overlay_image: "/portfolio/assets/images/hero-bg.jpg"
+  overlay_image: "{{ '/assets/images/hero-bg.jpg' | relative_url }}"
   actions:
     - label: "View Projects"
       url: "#projects"
