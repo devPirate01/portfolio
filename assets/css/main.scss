@@ -3,163 +3,252 @@
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'dark' }}";
 @import "minimal-mistakes";
 
 /* ============================================
-   CUSTOM PORTFOLIO STYLES
-   ============================================ */
+    CUSTOM PORTFOLIO STYLES (DARK MODE COMPLIANT)
+    ============================================ */
 
-/* Color system matching CV */
-$ink: #111827;
-$muted: #4b5563;
-$navy: #0b1f33;
-$teal: #005f73;
-
-/* Typography */
 body {
   font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $navy;
-}
-
-/* Hero overlay text */
-.page__hero--overlay {
-  .page__title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-  }
-
-  .page__lead {
-    font-size: 1.15rem;
-    max-width: 700px;
-  }
-}
-
-/* Project section headings */
-.page__content {
-  h2 {
-    margin-top: 3rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid $teal;
-  }
-
-  h3 {
-    margin-top: 2rem;
-    color: $navy;
-    font-weight: 600;
-  }
-
-  /* Result/outcome paragraphs */
-  p > strong:first-child {
-    color: $navy;
-  }
-}
-
-/* Code blocks */
-div.highlighter-rouge,
-figure.highlight {
-  border-radius: 12px;
-  background: #1f2937;
-  margin: 1.5rem 0;
-
-  .highlight {
-    background: transparent;
-    padding: 1rem;
-
-    code {
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      color: #e5e7eb;
-    }
-  }
-}
-
-/* Architecture diagram block */
-pre.diagram {
-  background: #1f2937;
-  color: #e5e7eb;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.85rem;
   line-height: 1.7;
-  padding: 1.25rem;
-  border-radius: 12px;
-  overflow-x: auto;
 }
 
-/* Buttons */
-.btn--primary {
-  background-color: $navy !important;
-  color: #fff !important;
-
-  &:hover {
-    background-color: darken($navy, 10%) !important;
-  }
-}
-
-/* Masthead (nav) */
-.masthead {
-  background: rgba(249, 250, 251, 0.96);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-
-  .greedy-nav {
-    a {
-      color: $navy;
-      font-weight: 600;
-
-      &:hover {
-        color: $teal;
-      }
-    }
-  }
-}
-
-/* Hide author sidebar ONLY when author_profile is set to false in the file header */
-/* This allows the index.md to show the sidebar while keeping about.md clean */
-.page--no-sidebar .sidebar {
+/* Hide RSS Feed link in footer */
+.page__footer-follow a[href$="feed.xml"] {
   display: none !important;
 }
 
-/* If you want to force hide it on specific pages, 
-   you can add 'no-sidebar' to the 'classes' in your Markdown header */
+/* Hero overlay text */
+.page__hero--overlay .page__title {
+  font-size: clamp(2.4rem, 4.8vw, 3.9rem);
+  font-weight: 700;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.page__hero--overlay .page__lead {
+  font-size: 1.1rem;
+  max-width: 760px;
+  line-height: 1.75;
+}
+
+/* Split-Pane Experience Cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .project-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.project-card__media {
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.2);
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 900px) {
+  .project-card__media {
+    width: 45%;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+.project-card__content {
+  padding: 1.5rem 2rem;
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .project-card__content {
+    width: 55%;
+  }
+}
+
+.project-card__meta {
+  color: #4ade80; 
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-card__content ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.project-card__content li + li {
+  margin-top: 0.5rem;
+}
+
+/* Professional Media Viewer Tabs */
+.project-media-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.viewer-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.viewer-nav button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.viewer-nav button:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.viewer-nav button.active {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.05);
+}
+
+.viewer-slides {
+  position: relative;
+  flex-grow: 1;
+}
+
+.viewer-slides .slide {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.viewer-slides .slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Code Block Adjustments */
+div.highlighter-rouge,
+figure.highlight,
+pre.diagram {
+  border-radius: 8px;
+  background: #0f172a;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+div.highlighter-rouge code,
+figure.highlight code,
+pre.diagram {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem; 
+  line-height: 1.6;
+}
+
+pre.diagram {
+  color: #f8fafc;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+div.highlighter-rouge .highlight,
+figure.highlight {
+  padding: 1rem;
+  background: transparent;
+}
+
+/* Buttons */
+.btn--primary,
+.btn--inverse {
+  border-radius: 999px;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.btn--primary {
+  background-color: #2563eb !important;
+  color: #fff !important;
+  border: none !important;
+
+  &:hover {
+    background-color: #1d4ed8 !important;
+  }
+}
+
+.btn--inverse {
+  background-color: transparent !important;
+  color: #e5e7eb !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+}
+
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project-links .btn {
+  margin-bottom: 0;
+}
+
+/* Hide author sidebar when the page opts out */
+.page--no-sidebar .sidebar,
 .no-sidebar .sidebar {
   display: none !important;
 }
 
-/* Ensure wide layout actually uses full width */
-.layout--single {
-  .page {
-    @include breakpoint($large) {
-      padding-right: 0;
-      width: 100%;
-    }
+/* Layout polish */
+.layout--single .page {
+  @include breakpoint($large) {
+    padding-right: 0;
+    width: 100%;
   }
 }
 
-/* Project images */
-.page__content {
-  img {
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin: 1rem 0;
-  }
+/* Smooth scroll offset for sticky header */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .page__hero--overlay {
-    .page__title {
-      font-size: 2rem;
-    }
-  }
-
-  .page__content {
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
+[id] {
+  scroll-margin-top: 80px;
 }

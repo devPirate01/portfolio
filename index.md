@@ -12,27 +12,128 @@ header:
       url: "#projects"
     - label: "Contact"
       url: "#contact"
-excerpt: "Games Programmer & AI Engineer. I build gameplay systems, AI-driven NPC interaction, and VR experiences with Unity, Unreal Engine, C#, C++, and Python."
+excerpt: "Games Programmer: Gameplay & AI Systems. Specialising in C#/C++ across Unity and Unreal Engine 5, NPC dialogue pipelines, and real-time gameplay mechanics."
 ---
 
 ## Featured work {#projects}
 
-Projects that demonstrate gameplay engineering, AI systems, VR publishing, and academic research.
+Projects demonstrating gameplay engineering, AI systems, and academic research.
 
-### 360° Dome Projection UI Warping — Awkward Studios / Media Cymru
+<div class="project-card">
+  <div class="project-card__media">
+    <div class="project-media-viewer" id="viewer-ai">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-ai', 0)">Media</button>
+        <button onclick="showMedia('viewer-ai', 1)">Architecture</button>
+        <button onclick="showMedia('viewer-ai', 2)">Code</button>
+      </div>
+      <div class="viewer-slides">
+        <div class="slide active">
+          <img src="{{ '/assets/images/ai-npc-hero.jpg' | relative_url }}" alt="AI-driven NPC interaction" loading="lazy" />
+        </div>
+        <div class="slide">
+<pre class="diagram">
+[Player Microphone]
+        ↓
+[Unreal C++ Mic Capture]
+        ↓ (HTTP POST)
+[Python FastAPI Server]
+    ├── [Whisper] → Speech-to-Text
+    ├── [Wit.ai] → Intent Classify
+    └── [Hugging Face] → Emotion
+        ↓ (JSON Response)
+[Unreal Behaviour Tree] → NPC Action
+</pre>
+        </div>
+        <div class="slide">
+{% highlight python %}
+@app.post("/predict")
+async def predict(audio: UploadFile):
+    text = whisper_model.transcribe(audio.file)
+    intent = wit_client.message(text)
+    emotion = emotion_pipeline(text)
+    return {"text": text, "intent": intent, "emotion": emotion}
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-card__content">
+    <h3>AI-Driven NPC Interaction Prototype</h3>
+    <p class="project-card__meta"><strong>Unreal Engine 5, C++, Python, FastAPI, Whisper, Wit.ai, Hugging Face</strong></p>
+    <p>A real-time, voice-driven NPC interaction system built for Unreal Engine 5.</p>
+    <ul>
+      <li>Built a local <strong>Python FastAPI</strong> server bridging player microphone input to <strong>Unreal Engine 5</strong> via a custom API.</li>
+      <li>Integrated <strong>Whisper</strong> (speech-to-text), <strong>Wit.ai</strong> (intent classification), and local <strong>Hugging Face</strong> models for real-time text and voice emotion detection.</li>
+      <li>Trained the voice-emotion model and configured <strong>Wit.ai</strong> intents using custom voice recordings.</li>
+      <li>Wired microphone access in <strong>Unreal C++</strong> and Blueprint, returning predicted intent/emotion signals for real-time NPC behaviour-tree logic.</li>
+    </ul>
+  </div>
+</div>
 
-**Unity, C#, TextMesh Pro, URP, GitHub PR workflow**
+<div class="project-card">
+  <div class="project-card__media">
+    <div class="project-media-viewer" id="viewer-apoceus">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-apoceus', 0)">Media</button>
+        <button onclick="showMedia('viewer-apoceus', 1)">Code</button>
+      </div>
+      <div class="viewer-slides">
+        <div class="slide active">
+          <img src="{{ '/assets/images/apoceus-hero.jpg' | relative_url }}" alt="Apoceus Winter Wars gameplay and team workflow" loading="lazy" />
+        </div>
+        <div class="slide">
+{% highlight csharp %}
+// ScriptableObject data configuration for unit stats
+[CreateAssetMenu(fileName = "NewUnit", menuName = "Apoceus/Unit Data")]
+public class UnitData : ScriptableObject
+{
+    public string unitName;
+    public int maxHealth;
+    public float movementSpeed;
+    public int baseDamage;
+    
+    // Designer-facing balance tweaks
+    [Range(0f, 1f)]
+    public float criticalHitChance;
+}
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-card__content">
+    <h3>Apoceus: Winter Wars — Landell Games</h3>
+    <p class="project-card__meta"><strong>Unity, C#, Unity DevOps, Plastic SCM, Steam</strong></p>
+    <p>A Unity PC project shipping to Steam, developed by a remote cross-disciplinary team.</p>
+    <ul>
+      <li>Coordinated a <strong>3–6 person programming team</strong>, translating production priorities into sprint tasks and raising sprint success from <strong>40% to 90%</strong>.</li>
+      <li>Profiled and optimised rendering bottlenecks with the <strong>Unity Profiler</strong>, improving frame time by <strong>10–30 FPS</strong> on target hardware.</li>
+      <li>Implemented <strong>ScriptableObject</strong>-based unit/data configuration and gameplay <strong>state-machine</strong> logic, supporting designer-led balance tweaks.</li>
+      <li>Owned weekly <strong>Unity DevOps</strong> branch merges and uploaded builds to a private <strong>Steam</strong> branch.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://store.steampowered.com/app/1841690/Apoceus_Winter_Wars/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Steam →</a>
+      <a href="https://www.youtube.com/watch?v=rFADxjYHDF0" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch video →</a>
+    </div>
+  </div>
+</div>
 
-Fixed severe text distortion on a 360° dome-projection game-show installation for CULTVR Lab.
-
-- Developed an editor-safe **Unity C#** component that directly manipulated **TextMesh Pro** vertex buffers using trigonometry and **Quaternion** rotations to warp text around a virtual cylinder.
-- Engineered a projection-boundary clipping system using **InverseLerp** and **SmoothStep** to eliminate text artifacting at half-sphere dome limits.
-- Authored **URP shaders**, material setups, and particle effects for large-scale immersive projection.
-- Programmed modular mini-game state transitions using **C# delegates** and **coroutines**, decoupling sequence logic from UI flow.
-
-**Result:** Legible text at extreme projection angles across a half-sphere dome, shipped for a live installation.
-
-```csharp
+<div class="project-card">
+  <div class="project-card__media">
+    <div class="project-media-viewer" id="viewer-dome">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-dome', 0)">Media</button>
+        <button onclick="showMedia('viewer-dome', 1)">Code</button>
+      </div>
+      <div class="viewer-slides">
+        <div class="slide active">
+          <img src="{{ '/assets/images/dome-hero.jpg' | relative_url }}" alt="360° dome projection interface" loading="lazy" />
+        </div>
+        <div class="slide">
+{% highlight csharp %}
+// Maps flat TextMesh Pro vertices onto a virtual cylinder
+// preserving text legibility at extreme projection angles
 for (int i = 0; i < vertices.Length; i++)
 {
     Vector3 localPos = transform.InverseTransformPoint(vertices[i].position);
@@ -45,113 +146,118 @@ for (int i = 0; i < vertices.Length; i++)
         radius * Mathf.Sin(angle)
     );
 }
-```
-
-### AI-Driven NPC Interaction Prototype
-
-**Unreal Engine 5, C++, Python, FastAPI, Whisper, Wit.ai, Hugging Face**
-
-A real-time, voice-driven NPC interaction system in Unreal Engine 5.
-
-- Built a local **Python FastAPI** server bridging real-time microphone input to a **C++** application via a custom REST API.
-- Integrated **Whisper** (speech-to-text), **Wit.ai** (intent classification), and local **Hugging Face** models for real-time text and voice emotion detection.
-- Trained the voice-emotion model and configured **Wit.ai** intents using custom voice recordings.
-- Wired microphone capture in **C++**, returning predicted intent and emotion signals to drive real-time **behaviour-tree** decision logic.
-
-**Result:** A working end-to-end pipeline from player voice input to NPC-relevant intent and emotion signals.
-
-```python
-@app.post("/predict")
-async def predict(audio: UploadFile):
-    text = whisper_model.transcribe(audio.file)
-    intent = wit_client.message(text)
-    emotion = emotion_pipeline(text)
-    return {"text": text, "intent": intent, "emotion": emotion}
-```
-
-### Apoceus: Winter Wars — Landell Games
-
-**Unity, C#, Unity DevOps, Plastic SCM, Steam**
-
-A 3–6 person Unity team project, shipped weekly to a private Steam branch.
-
-- Coordinated a **3–6 person programming team**, translating production priorities into sprint tasks and raising sprint success from **40% to 90%**.
-- Profiled and optimised rendering bottlenecks with the **Unity Profiler**, improving frame time by **10–30 FPS** on target hardware.
-- Owned weekly **Unity DevOps** branch merges and uploaded builds to a private **Steam** branch.
-- Implemented **ScriptableObject**-based unit/data configuration, Unity asset **LOD** setup, and gameplay **state-machine** logic, supporting designer-led balance tweaks.
-
-**Result:** Consistent weekly playable builds across the team's Steam branch.
-
-<div class="project-links">
-  <a href="https://store.steampowered.com/app/1841690/Apoceus_Winter_Wars/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Steam →</a>
-  <a href="https://www.youtube-nocookie.com/channel/UCKcDQ1wqQHMPW7SKOFdixPQ" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">YouTube Channel →</a>
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-card__content">
+    <h3>360° Dome Projection UI — Awkward Studios / Media Cymru</h3>
+    <p class="project-card__meta"><strong>Unity, C#, TextMesh Pro, URP, GitHub PR workflow</strong></p>
+    <p>R&D for CULTVR Lab: a 360° dome-projection game-show installation.</p>
+    <ul>
+      <li>Solved 360° dome-projection UI distortion by developing an editor-safe <strong>Unity C#</strong> component that directly manipulated <strong>TextMesh Pro</strong> vertex buffers using trigonometry and <strong>Quaternion</strong> rotations.</li>
+      <li>Engineered a projection-boundary clipping system to reduce text artifacting where UI elements crossed half-sphere dome limits.</li>
+      <li>Programmed modular mini-game state transitions using <strong>C# delegates</strong> and <strong>coroutines</strong>, decoupling sequence logic from UI flow.</li>
+    </ul>
+  </div>
 </div>
 
-### VR Playground — Meta Quest Store
-
-**Unity, C#, Meta Quest SDK**
-
-A standalone VR game, shipped to the Meta Quest Store.
-
-- Built and tuned the **core gameplay loop** with physics-based standalone headset-only interaction.
-- Handled the full **Meta Quest Store** submission, compliance, and publishing pipeline.
-- Optimised draw calls and texture memory for mobile VR constraints, maintaining stable frame rates on Quest 2 hardware.
-- Iterated post-launch on player feedback, tuning interaction and performance.
-
-**Result:** Live, published title on the Meta Quest Store.
-
-<div class="project-links">
-  <a href="https://www.oculus.com/experiences/quest/5789612427788431/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Meta Quest →</a>
-  <a href="https://www.youtube.com/watch?v=H5RhL2Hi9-w" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch Trailer →</a>
+<div class="project-card">
+  <div class="project-card__media">
+    <img src="{{ '/assets/images/vr-quest-hero.jpg' | relative_url }}" alt="VR Playground project hero image" loading="lazy" />
+  </div>
+  <div class="project-card__content">
+    <h3>VR Playground — Meta Quest Store</h3>
+    <p class="project-card__meta"><strong>Unity, C#, Meta Quest SDK</strong></p>
+    <p>A standalone VR game, shipped to the Meta Quest Store.</p>
+    <ul>
+      <li>Built and tuned the <strong>core gameplay loop</strong> with physics-based standalone headset-only interaction.</li>
+      <li>Handled the full <strong>Meta Quest Store</strong> submission, compliance, and publishing pipeline.</li>
+      <li>Iterated post-launch on player feedback, tuning interaction and performance constraints.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://www.oculus.com/experiences/quest/5789612427788431/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Meta Quest →</a>
+      <a href="https://www.youtube.com/watch?v=H5RhL2Hi9-w" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch Trailer →</a>
+    </div>
+  </div>
 </div>
 
-### Hand-Tracked VR Interaction Prototype
-
-**Unity, hand-tracking SDKs, mobile VR**
-
-A hand-tracked VR interaction prototype, built after evaluating Unreal's mobile VR pipeline against Unity.
-
-- Compared Unreal and Unity for mobile VR and hand-tracking support, choosing Unity based on API and documentation maturity.
-- Integrated third-party hand-tracking APIs with limited documentation.
-- Delivered a working prototype under real technical uncertainty, planning sprints around unknown variables.
-
-**Result:** A working hand-tracked prototype, and a clear technical comparison that shaped the engine choice for the project.
-
-<div class="project-links">
-  <a href="https://www.youtube.com/watch?v=WXT4huBhOA0" class="btn btn--inverse" target="_blank" rel="noopener noreferrer">Watch Prototype Video →</a>
-</div>
-
-### Publication — ICHORA 2024
-
-**Research, LLMs, pursuit learning automata, NLP, local AI systems**
-
-Published and presented a conference paper on resource-efficient NPC dialogue using local LLMs.
-
-**Balancing Game Satisfaction and Resource Efficiency: LLM and Pursuit Learning Automata for NPC Dialogues**
-
-- Proposed a resource-efficient local LLM pipeline for dynamic NPC dialogue, applying **pursuit learning automata** to balance player satisfaction against computational cost.
-- Explored local AI methods that reduce reliance on cloud APIs for real-time applications.
-- Presented research findings at ICHORA 2024.
-
-**Result:** A published paper linking academic research to game AI engineering. This research underpins my current MSc dissertation on safe, efficient AI companions.
-
-<div class="project-links">
-  <a href="https://scholar.google.com/scholar?q=Balancing+Game+Satisfaction+and+Resource+Efficiency+LLM+Pursuit+Learning+Automata+NPC+Dialogues" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Google Scholar →</a>
+<div class="project-card">
+  <div class="project-card__media">
+    <div class="project-media-viewer" id="viewer-ichora">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-ichora', 0)">Presentation</button>
+        <button onclick="showMedia('viewer-ichora', 1)">In-Game</button>
+      </div>
+      <div class="viewer-slides">
+        <div class="slide active">
+          <img src="{{ '/assets/images/ichora-photo.jpg' | relative_url }}" alt="Research poster and presentation for ICHORA conference" loading="lazy" />
+        </div>
+        <div class="slide">
+          <img src="{{ '/assets/images/ichora-ingame.jpg' | relative_url }}" alt="In-game NPC dialogue interaction" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-card__content">
+    <h3>Publication — ICHORA 2024</h3>
+    <p class="project-card__meta"><strong>Research, LLMs, pursuit learning automata, NLP, local AI systems</strong></p>
+    <p><strong>Balancing Game Satisfaction and Resource Efficiency: LLM and Pursuit Learning Automata for NPC Dialogues</strong></p>
+    <ul>
+      <li>Published and presented a paper proposing a resource-efficient local <strong>LLM pipeline</strong> for dynamic NPC dialogue.</li>
+      <li>Applied <strong>pursuit learning automata</strong> to balance player satisfaction against computational cost.</li>
+      <li>Currently expanding this research via an MSc dissertation focusing on <strong>safe AI companions for games</strong> using Skyrim, Creation Kit, and a Python LLM bridge.</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://scholar.google.com/scholar?q=Balancing+Game+Satisfaction+and+Resource+Efficiency+LLM+Pursuit+Learning+Automata+NPC+Dialogues" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on Google Scholar →</a>
+    </div>
+  </div>
 </div>
 
 ## About {#about}
 
-MSc Artificial Intelligence candidate at **Cardiff University**. Published research on LLM-driven NPC dialogue (**ICHORA 2024**). Shipped a VR title to the **Meta Quest Store**. Led a programming team on a Steam-bound Unity project. I work at the intersection of gameplay, AI, and real-time systems — delivering playable game features, AI prototypes, and production pipelines for small teams and immersive titles.
+**Games Programmer: Gameplay & AI Systems**
+
+Gameplay and AI programmer with 2+ years of C#/C++ experience across Unity and Unreal Engine 5. Core programming team lead at **Landell Games**, shipping a commercial Unity title to Steam, alongside a standalone VR release on the Meta Quest Store. 
+
+MSc Artificial Intelligence graduate (**Cardiff University**), specialising in bridging complex local AI pipelines with real-time game engines for advanced NPC interactions.
+
+<div class="project-links">
+  <a href="{{ '/about/' | relative_url }}" class="btn btn--inverse">Read Full Profile</a>
+</div>
+
+## CV {#cv}
+
+<div class="project-links">
+  <a href="{{ '/cv/' | relative_url }}" class="btn btn--primary">View CV Document</a>
+  <a href="{{ '/assets/Mahdi_Jahangiri_CV_Games.pdf' | relative_url }}" class="btn btn--inverse" download>Download PDF</a>
+</div>
 
 ## Contact {#contact}
 
-Get in touch for gameplay engineering, AI systems, or portfolio reviews.
+Available for gameplay engineering and AI systems roles.
 
 - **Email:** <a href="mailto:mapjiv@live.com">mapjiv@live.com</a>
 - **LinkedIn:** <a href="https://www.linkedin.com/in/m-mahdi-jahangiri/" target="_blank" rel="noopener noreferrer">linkedin.com/in/m-mahdi-jahangiri</a>
 - **GitHub:** <a href="https://github.com/devPirate01" target="_blank" rel="noopener noreferrer">github.com/devPirate01</a>
 
-<div class="project-links" style="margin-top: 1.5rem;">
-  <a href="{{ '/assets/Mahdi_Jahangiri_CV_Games.pdf' | relative_url }}" class="btn btn--primary" target="_blank">View CV</a>
-  <a href="{{ '/assets/Mahdi_Jahangiri_CV_Games.pdf' | relative_url }}" class="btn btn--inverse" download>Download CV</a>
-</div>
+<script>
+// Lightweight script to handle media tabs in project cards
+function showMedia(viewerId, index) {
+  const viewer = document.getElementById(viewerId);
+  if (!viewer) return;
+  const buttons = viewer.querySelectorAll('.viewer-nav button');
+  const slides = viewer.querySelectorAll('.slide');
+  
+  buttons.forEach((btn, i) => {
+    if (i === index) btn.classList.add('active');
+    else btn.classList.remove('active');
+  });
+  
+  slides.forEach((slide, i) => {
+    if (i === index) slide.classList.add('active');
+    else slide.classList.remove('active');
+  });
+}
+</script>

@@ -1,6 +1,6 @@
 title: "Mohammed Mahdi Jahangiri"
 name: "Mohammed Mahdi Jahangiri"
-description: "Games Programmer & AI Engineer. Published research on NPC dialogue, shipped VR titles, and built real-time AI systems."
+description: "Games Programmer: Gameplay & AI Systems. 2+ years of C#/C++ across Unity and Unreal Engine 5. Shipped a commercial title and published research on AI companions."
 url: "https://devpirate01.github.io"
 baseurl: "/portfolio"
 
@@ -9,7 +9,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-include-cache
 
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "dark"
 breadcrumbs: false
 search: false
 locale: "en-GB"

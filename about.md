@@ -5,22 +5,24 @@ permalink: /about/
 classes: no-sidebar
 ---
 
-# About Me
+**Games Programmer: Gameplay & AI Systems**
 
-MSc Artificial Intelligence candidate at **Cardiff University**. Published researcher on LLM-driven NPC dialogue (**ICHORA 2024**). Shipped a VR title to the **Meta Quest Store**. Led a programming team on a Steam-bound Unity project.
+Gameplay and AI programmer with 2+ years of C#/C++ experience across Unity and Unreal Engine 5. Core programming team lead at **Landell Games**, coordinating a cross-disciplinary team to ship a commercial Unity title (*Apoceus*) to Steam. Proven track record in full-cycle game development, including publishing a standalone VR release on the Meta Quest Store. 
+
+Academic background as an MSc Artificial Intelligence graduate (**Cardiff University**) directly supports gameplay systems, focusing on integrating complex local AI pipelines (LLMs, NLP) into real-time game engines for advanced NPC dialogue and safe AI companions.
 
 ## Professional Summary
 
-I work at the intersection of gameplay, AI, and real-time systems. My expertise lies in bridging the gap between complex AI models (LLMs, Computer Vision, NLP) and real-time game engines like **Unity** and **Unreal Engine**. 
+Expertise lies at the intersection of gameplay mechanics, AI integration, and real-time systems architecture. Strong focus on agile production pipelines (Steam builds, Unity DevOps, Plastic SCM), cross-departmental mediation, and resolving rendering bottlenecks. 
 
-Whether it's optimizing rendering pipelines for VR, implementing physics-based interactions, or deploying local AI inference for NPC intelligence, my goal is to create immersive, responsive, and intelligent digital worlds.
+Technical capabilities include deploying local AI inference for NPC intelligence, optimising rendering pipelines for target hardware, and building stable, physics-based interactions and state-machine logic in C# and C++.
 
 ## Technical Skills
 
 ### Game Engines & Tools
-- **Unity** (C#, URP, Physics, Mobile VR, Meta Quest SDK)
-- **Unreal Engine 5** (C++, Blueprints, Behavior Trees, Niagara)
-- **Version Control:** Git, Plastic SCM, GitHub Actions
+- **Unity** (C#, URP, Physics, Meta Quest SDK, Unity DevOps)
+- **Unreal Engine 5** (C++, Blueprints, Behavior Trees)
+- **Version Control & Production:** Git, Plastic SCM, GitHub Actions, Steamworks
 
 ### Artificial Intelligence
 - **Machine Learning:** LLMs (Local deployment), NLP, Computer Vision
@@ -28,22 +30,20 @@ Whether it's optimizing rendering pipelines for VR, implementing physics-based i
 - **Research:** Pursuit Learning Automata, Resource-efficient AI
 
 ### Programming & Systems
-- **Languages:** C++, C#, Python, C
-- **Systems:** Real-time audio/voice processing, HTTP/REST API integration, Multi-threaded optimization
+- **Core Languages:** C++, C#, Python
+- **Systems:** Real-time audio/voice processing, HTTP/REST API integration, Multi-threaded optimisation, memory profiling
 
 ## Education
 
 ### MSc Artificial Intelligence
-**Cardiff University** | *[Expected Graduation Date]*
-- Focus on safe, efficient AI companions and LLM integration in real-time environments.
+**Cardiff University** | *Graduated*
+- Focus on safe, efficient AI companions and LLM integration in real-time environments. Published researcher on LLM-driven NPC dialogue (**ICHORA 2024**).
 
-### [Your Undergraduate Degree Name]
-**[Your University Name]** | *[Graduation Year]*
-- [Optional: Mention a key achievement or project here]
+### BEng Computer Engineering
+**Islamic Azad University, Tehran** | *Graduated*
+- First-Class Honours. Core study: Data Structures & Algorithms, Advanced Programming (C++), Computational Architecture.
 
 ## Contact Information
-
-Feel free to reach out for collaborations, project discussions, or technical inquiries.
 
 - **Email:** [mapjiv@live.com](mailto:mapjiv@live.com)
 - **LinkedIn:** [linkedin.com/in/m-mahdi-jahangiri](https://www.linkedin.com/in/m-mahdi-jahangiri/)
