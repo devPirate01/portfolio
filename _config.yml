@@ -1,60 +1,25 @@
-# Site Settings
 title: "Mohammed Mahdi Jahangiri"
-description: "Games Programmer & AI Engineer. I build gameplay systems, AI-driven NPC interaction, and VR experiences."
+name: "Mohammed Mahdi Jahangiri"
+description: "Games Programmer & AI Engineer. Published research on NPC dialogue, shipped VR titles, and built real-time AI systems."
 url: "https://devpirate01.github.io"
 baseurl: "/portfolio"
-navigation: _data/navigation.yml
 
-# Theme Settings
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
-minimal_mistakes_skin: "default"
 
-# Plugins
 plugins:
   - jekyll-include-cache
-  - jekyll-remote-theme
 
-# Navigation
+minimal_mistakes_skin: "default"
 breadcrumbs: false
+search: false
+locale: "en-GB"
 
-# Author Profile (This populates the sidebar automatically)
-author:
-  name: "Mohammed Mahdi Jahangiri"
-  # avatar: "/assets/images/avatar.jpg" # Uncomment this line if you add a photo later
-  bio: "MSc Artificial Intelligence candidate at Cardiff University. Published researcher and Games Programmer."
-  location: "Cardiff, UK"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/devPirate01"
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:mapjiv@live.com"
-
-# Footer Settings
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/devPirate01"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
-
-# Default settings for all pages
 defaults:
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-<<<<<<< HEAD
-      author_profile: false # We will turn this on per-page in index.md
-      classes: wide
-=======
       author_profile: false
       classes: wide
 
@@ -69,7 +34,7 @@ author:
       url: "https://github.com/devPirate01"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/m-jahangiri"
+      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:mapjiv@live.com"
@@ -78,7 +43,7 @@ social:
   - name: "GitHub"
     url: "https://github.com/devPirate01"
   - name: "LinkedIn"
-    url: "https://linkedin.com/in/m-jahangiri"
+    url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"
 
 footer:
   links:
@@ -87,5 +52,4 @@ footer:
       url: "https://github.com/devPirate01"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/m-jahangiri"
->>>>>>> parent of f07ef86 (Updated site header and in-site cv view.)
+      url: "https://www.linkedin.com/in/m-mahdi-jahangiri/"

@@ -1,16 +1,19 @@
-## Hi there 👋
+# Portfolio site
 
-<!--
-**devPirate01/devPirate01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This repository hosts a GitHub Pages portfolio for Mohammed Mahdi Jahangiri, built with Jekyll and the Minimal Mistakes 4.28.0 theme.
 
-Here are some ideas to get you started:
+## Site structure
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- `_config.yml` configures the remote theme and site metadata.
+- `index.md` contains the homepage content and front matter for the splash layout.
+- `assets/` stores the CV PDF and image assets used by the site.
+- `_data/navigation.yml` provides the main navigation links.
+- `_data/ui-text.yml` provides the theme’s English UI text strings for GitHub Pages compatibility.
+
+## Local preview
+
+Install Ruby and Bundler, then run the following command:
+
+```bash
+bundle exec jekyll serve
+```

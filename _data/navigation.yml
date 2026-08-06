@@ -1,10 +1,10 @@
 # This is the main navigation menu
 main:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/about/"
   - title: "Projects"
-    url: "/#projects"
+    url: "#projects"
+  - title: "About"
+    url: "#about"
+  - title: "Resume"
+    url: "/portfolio/assets/Mahdi_Jahangiri_CV_Games.pdf"
   - title: "Contact"
-    url: "/#contact"
+    url: "#contact"
