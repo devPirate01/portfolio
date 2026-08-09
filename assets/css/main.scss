@@ -7,7 +7,7 @@
 @import "minimal-mistakes";
 
 /* ============================================
-    CUSTOM PORTFOLIO STYLES (JEKYLL THEME COMPLIANT)
+    CUSTOM PORTFOLIO STYLES (DARK MODE COMPLIANT)
     ============================================ */
 
 body {
@@ -38,9 +38,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2.5rem 0;
-  border: 1px solid rgba($text-color, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  background: rgba($text-color, 0.03);
+  background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
@@ -69,7 +69,7 @@ body {
 @media (min-width: 900px) {
   .project-card__media {
     width: 45%;
-    border-right: 1px solid rgba($text-color, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -89,10 +89,9 @@ body {
 }
 
 .project-card__meta {
-  color: $link-color; 
+  color: #4ade80; 
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
-  font-weight: 600;
 }
 
 .project-card__content ul {
@@ -115,14 +114,14 @@ body {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
-  border-bottom: 1px solid rgba($text-color, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 0.5rem;
 }
 
 .viewer-nav button {
   background: transparent;
   border: 1px solid transparent;
-  color: $muted-text-color;
+  color: #94a3b8;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -134,14 +133,14 @@ body {
 }
 
 .viewer-nav button:hover {
-  color: $text-color;
-  background: rgba($text-color, 0.05);
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .viewer-nav button.active {
-  color: $link-color;
-  border-color: rgba($link-color, 0.4);
-  background: rgba($link-color, 0.1);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.05);
 }
 
 .viewer-slides {
@@ -157,7 +156,7 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    box-shadow: 0 0 0 2px rgba($link-color, 0.5);
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.4);
     border-radius: 8px;
   }
 
@@ -166,13 +165,13 @@ body {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    background: rgba($background-color, 0.9);
-    color: $link-color;
+    background: rgba(15, 23, 42, 0.85);
+    color: #4ade80;
     font-size: 0.7rem;
     font-weight: 600;
     padding: 3px 8px;
     border-radius: 4px;
-    border: 1px solid rgba($link-color, 0.3);
+    border: 1px solid rgba(74, 222, 128, 0.3);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
@@ -198,7 +197,7 @@ div.highlighter-rouge,
 figure.highlight,
 pre.diagram {
   border-radius: 8px;
-  background: $code-background-color;
+  background: #0f172a;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
@@ -206,13 +205,13 @@ pre.diagram {
 div.highlighter-rouge code,
 figure.highlight code,
 pre.diagram {
-  font-family: $monospace;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.75rem; 
   line-height: 1.6;
 }
 
 pre.diagram {
-  color: $text-color;
+  color: #f8fafc;
   padding: 1rem;
   overflow-x: auto;
 }
@@ -231,22 +230,22 @@ figure.highlight {
 }
 
 .btn--primary {
-  background-color: $primary-color !important;
+  background-color: #2563eb !important;
   color: #fff !important;
   border: none !important;
 
   &:hover {
-    filter: brightness(0.9);
+    background-color: #1d4ed8 !important;
   }
 }
 
 .btn--inverse {
   background-color: transparent !important;
-  color: $text-color !important;
-  border: 1px solid rgba($text-color, 0.25) !important;
+  color: #e5e7eb !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   
   &:hover {
-    background-color: rgba($text-color, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
   }
 }
 
@@ -286,13 +285,12 @@ html {
 
 /* ============================================
    CLICK-TO-EXPAND MEDIA & CODE MODAL LIGHTBOX
-   (JEKYLL THEME VARIABLE COMPLIANT)
    ============================================ */
 
 .media-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba($background-color, 0.88);
+  background: rgba(11, 15, 25, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 10000;
@@ -311,8 +309,8 @@ html {
 }
 
 .media-modal-container {
-  background: $code-background-color;
-  border: 1px solid rgba($border-color, 0.8);
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
   max-width: 95vw;
@@ -334,13 +332,13 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid rgba($border-color, 0.6);
-  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
 
   .media-modal-title {
     font-size: 0.85rem;
     font-weight: 600;
-    color: $link-color;
+    color: #4ade80;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -350,9 +348,9 @@ html {
 }
 
 .media-modal-close {
-  background: rgba($text-color, 0.08);
-  border: 1px solid rgba($text-color, 0.15);
-  color: $text-color;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
   font-size: 1.1rem;
   line-height: 1;
   padding: 0.35rem 0.65rem;
@@ -371,7 +369,7 @@ html {
   padding: 1.25rem;
   overflow: auto;
   max-height: calc(92vh - 60px);
-  color: $text-color;
+  color: #f8fafc;
 
   /* Custom scrollbars for code and modal body */
   &::-webkit-scrollbar,
@@ -391,11 +389,11 @@ html {
   &::-webkit-scrollbar-thumb,
   div.highlighter-rouge::-webkit-scrollbar-thumb,
   pre::-webkit-scrollbar-thumb {
-    background: rgba($text-color, 0.25);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 4px;
 
     &:hover {
-      background: rgba($link-color, 0.6);
+      background: rgba(74, 222, 128, 0.6);
     }
   }
 
@@ -423,10 +421,10 @@ html {
   figure.highlight pre,
   pre.diagram,
   code {
-    font-family: $monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-size: 0.92rem;
     line-height: 1.65;
-    color: $text-color;
+    color: #f8fafc;
     white-space: pre !important;
     word-break: normal !important;
     word-wrap: normal !important;
