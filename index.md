@@ -50,7 +50,7 @@ Projects demonstrating gameplay engineering, AI systems, and academic research.
         </div>
         <div class="slide">
 {% highlight python %}
-#This is send with the main prompt to give a template for the llm's reply
+#This is sent with the main prompt to give a template for the llm's reply
 def build_output_contract() -> dict:
     return {
         "schema_version": OUTPUT_SCHEMA_VERSION,
@@ -92,8 +92,7 @@ def build_output_contract() -> dict:
         </div>
         <div class="slide">
 {% highlight csharp %}
-// ScriptableObject data configuration for unit stats
-/ Calculate the perimeter of the search circle for unoccupied positions
+// Calculate the perimeter of the search circle for unoccupied positions
 // then determine the expected number of free positions based on the unit radius
 int maxNumberOfSurroundingCircles = 50;
 int[] expectedPositionCounts = new int[maxNumberOfSurroundingCircles];
@@ -219,7 +218,10 @@ public void RestartSequence()
 <div class="project-card">
   <div class="project-card__media">
     <div class="project-media-viewer" id="viewer-ai">
-        <div class="viewer-slides">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-ai', 0)">Architecture</button>
+      </div>
+      <div class="viewer-slides">
         <div class="slide active">
 <pre class="diagram">
 [Player Microphone]
@@ -252,7 +254,16 @@ public void RestartSequence()
 
 <div class="project-card">
   <div class="project-card__media">
-    <img src="{{ '/assets/images/vr-quest-hero.jpg' | relative_url }}" alt="VR Playground project hero image" loading="lazy" />
+    <div class="project-media-viewer" id="viewer-vr">
+      <div class="viewer-nav">
+        <button class="active" onclick="showMedia('viewer-vr', 0)">Media</button>
+      </div>
+      <div class="viewer-slides">
+        <div class="slide active">
+          <img src="{{ '/assets/images/vr-quest-hero.jpg' | relative_url }}" alt="VR Playground project hero image" loading="lazy" />
+        </div>
+      </div>
+    </div>
   </div>
   <div class="project-card__content">
     <h3>VR Playground — Meta Quest Store</h3>
