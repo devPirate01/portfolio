@@ -345,7 +345,7 @@ Available for gameplay engineering and AI systems roles.
   <div class="media-modal-container" onclick="event.stopPropagation()">
     <div class="media-modal-header">
       <span class="media-modal-title"><span>●</span> Expanded View</span>
-      <button class="media-modal-close" onclick="closeMediaModal()" title="Close (Esc)">✕</button>
+      <button class="media-modal-close" onclick="closeMediaModal(event)" title="Close (Esc)">✕</button>
     </div>
     <div class="media-modal-body" id="media-modal-body"></div>
   </div>
@@ -372,12 +372,24 @@ function showMedia(viewerId, index) {
 
 // Click-to-expand Lightbox Modal
 function openMediaModal(contentElement) {
-  const modal = document.getElementById('media-modal');
+  let modal = document.getElementById('media-modal');
   const modalBody = document.getElementById('media-modal-body');
   if (!modal || !modalBody) return;
   
+  // Attach directly to document.body to bypass layout overflow clipping
+  if (modal.parentNode !== document.body) {
+    document.body.appendChild(modal);
+  }
+  
   modalBody.innerHTML = contentElement.innerHTML;
+  
+  // Enforce explicit inline styles alongside CSS class
+  modal.style.display = 'flex';
+  modal.style.opacity = '1';
+  modal.style.visibility = 'visible';
+  modal.style.pointerEvents = 'auto';
   modal.classList.add('is-active');
+  
   document.body.style.overflow = 'hidden';
 }
 
@@ -386,13 +398,27 @@ function closeMediaModal(event) {
   const modal = document.getElementById('media-modal');
   if (!modal) return;
   
+  modal.style.opacity = '0';
+  modal.style.visibility = 'hidden';
+  modal.style.pointerEvents = 'none';
   modal.classList.remove('is-active');
+  
+  setTimeout(() => {
+    if (!modal.classList.contains('is-active')) {
+      modal.style.display = 'none';
+    }
+  }, 250);
+  
   document.body.style.overflow = '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.viewer-slides .slide').forEach(slide => {
-    slide.addEventListener('click', () => openMediaModal(slide));
+    slide.addEventListener('click', (e) => {
+      // Ignore click if user is selecting text
+      if (window.getSelection && window.getSelection().toString().length > 0) return;
+      openMediaModal(slide);
+    });
   });
 });
 
