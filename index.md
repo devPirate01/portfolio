@@ -340,8 +340,19 @@ Available for gameplay engineering and AI systems roles.
 - **LinkedIn:** <a href="https://www.linkedin.com/in/m-mahdi-jahangiri/" target="_blank" rel="noopener noreferrer">linkedin.com/in/m-mahdi-jahangiri</a>
 - **GitHub:** <a href="https://github.com/devPirate01" target="_blank" rel="noopener noreferrer">github.com/devPirate01</a>
 
+<!-- Theme-Compliant Media & Code Lightbox Modal -->
+<div id="media-modal" class="media-modal-backdrop" onclick="closeMediaModal(event)">
+  <div class="media-modal-container" onclick="event.stopPropagation()">
+    <div class="media-modal-header">
+      <span class="media-modal-title"><span>●</span> Expanded View</span>
+      <button class="media-modal-close" onclick="closeMediaModal()" title="Close (Esc)">✕</button>
+    </div>
+    <div class="media-modal-body" id="media-modal-body"></div>
+  </div>
+</div>
+
 <script>
-// Lightweight script to handle media tabs in project cards
+// Tab switcher logic
 function showMedia(viewerId, index) {
   const viewer = document.getElementById(viewerId);
   if (!viewer) return;
@@ -358,4 +369,34 @@ function showMedia(viewerId, index) {
     else slide.classList.remove('active');
   });
 }
+
+// Click-to-expand Lightbox Modal
+function openMediaModal(contentElement) {
+  const modal = document.getElementById('media-modal');
+  const modalBody = document.getElementById('media-modal-body');
+  if (!modal || !modalBody) return;
+  
+  modalBody.innerHTML = contentElement.innerHTML;
+  modal.classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMediaModal(event) {
+  if (event && event.target !== event.currentTarget && !event.target.classList.contains('media-modal-close')) return;
+  const modal = document.getElementById('media-modal');
+  if (!modal) return;
+  
+  modal.classList.remove('is-active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.viewer-slides .slide').forEach(slide => {
+    slide.addEventListener('click', () => openMediaModal(slide));
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMediaModal();
+});
 </script>
